@@ -1,0 +1,27 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+header {
+  background: #bde0fe;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex; }
+
+body {
+  background: #e3d5ca;
+  margin-top: 100px; }
+
+.container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px 300px 300px 300px; }
+
+.container img {
+  max-width: 200px; }
+
+/*# sourceMappingURL=styles.css.map */

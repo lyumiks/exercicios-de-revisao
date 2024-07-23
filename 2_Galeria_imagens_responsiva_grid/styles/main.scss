@@ -1,0 +1,53 @@
+@import "variables";
+@import "reset";
+
+header {
+  background: #bde0fe;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+
+body {
+  background: $background-color;
+  margin-top: 100px;
+}
+
+@function calculate-percentage($ncolunas) {
+  @return 100% / $ncolunas;
+}
+
+@mixin tamanhotela($ncolunas) {
+  grid-template-columns: repeat($ncolunas, calculate-percentage($ncolunas));
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px 300px 300px 300px;
+}
+// .container {
+//   @include tamanhotela(4);
+//   display: grid;
+//   background-color: $background-color;
+//   align-self: auto;
+//   align-content: center;
+//   justify-content: space-around;
+
+// //   @media (max-width: 1000px) {
+// //     @include tamanhotela(3);
+// //   }
+
+// //   @media (max-width: 800px) {
+// //     @include tamanhotela(2);
+// //   }
+
+// //   @media (max-width: 600px) {
+// //     @include tamanhotela(1);
+// //   }
+// // }
+
+.container img {
+  max-width: 200px;
+}
